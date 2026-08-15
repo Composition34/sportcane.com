@@ -1,0 +1,219 @@
+// Styles
+
+// ==========================================
+// Brand Variables
+// ==========================================
+
+// Colors
+$gold: #9D7E43;
+$black: #111111;
+$red: #9E2B25;
+$titanium: #BAB7AE;
+$white: #FFFFFF;
+$grey: #888888;
+$linebreak: #D6D6D4;
+
+// Fonts
+$font-heading: 'Bricolage Grotesque', sans-serif;
+$font-body: 'Manrope', sans-serif;
+
+// ==========================================
+// Brand Variables
+// == ==========================================
+
+
+// ==========================================
+// Responsive Breakpoint Mixins
+// ==========================================
+
+$breakpoint-tablet: 999px;
+$breakpoint-desktop: 1000px;
+
+// Tablet & Mobile (999px and below)
+@mixin tablet {
+  @media screen and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+// Desktop (1000px and up)
+@mixin desktop {
+  @media screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+
+
+
+.site-main {
+  .ct-container {
+    max-width: 100%;
+    padding: 0;
+    width: 100%;
+    min-height: auto;
+  }
+}
+
+
+@include desktop {
+  .ct-container {
+    min-height: 66px !important;
+  }
+  .ct-header {
+    min-height: 66px !important;
+  }
+}
+
+
+
+.ct-header {
+  .site-logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+      width: auto;
+      height: 32px !important;
+    }
+  }
+  .header-menu-1 {
+    height: auto;
+    ul {
+      li {
+        a {
+          text-transform: capitalize;
+          color: $black;
+          padding: 10px 13px !important;
+          border-radius: 20px;
+          margin-right: 4px;
+          transition: .2s;
+          &:hover {
+            color: $white;
+            background-color: $black;
+            transition: .2s;
+          }
+        }
+        &.current-menu-item {
+          a {
+            color: $white;
+            background-color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile Menu Fix
+// Fix Blocksy Off-Canvas Drawer Clipping
+@include tablet {
+  .ct-panel-content {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    max-height: 100vh !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    &:first-child {
+      display: none !important;
+    }
+    .ct-panel-content-inner {
+      flex: 1 0 auto !important;
+      height: auto !important;
+      min-height: min-content !important;
+      max-height: none !important;
+      overflow: visible !important;
+    }
+  }
+}
+#offcanvas {
+  // Force visibility and stacking context for mobile menu links
+  .ct-panel-inner {
+    div {
+      &:nth-child(2) {
+        display: none !important;
+      }
+    }
+  }
+  ul#menu-mobile-nav {
+    position: relative;
+    z-index: 10;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    li {
+      opacity: 1 !important;
+      visibility: visible !important;
+      a {
+        position: relative;
+        z-index: 11;
+        opacity: 1 !important;
+        visibility: visible !important;
+        text-transform: capitalize;
+        color: $white;
+        font-size: 16px;
+        padding: 10px 13px !important;
+        margin-bottom: 4px;
+        border-radius: 20px;
+        margin-right: 4px;
+        transition: .2s;
+        &:hover {
+          color: $white;
+          transition: .2s;
+        }
+      }
+      &.current-menu-item {
+        a {
+          color: $white;
+          &:hover {
+            color: $white;
+            transition: .2s;
+          }
+        }
+      }
+    }
+  }
+}
+
+// footer
+.ct-footer {
+  background-color: $white !important;
+  .ct-widget {
+    img {
+      width: auto;
+      height: 32px;
+      margin-bottom: 0;
+    }
+    p {
+     color: $grey;
+     font-size: 15px;
+     font-weight: 400;
+     padding: 5px 0;
+     margin: 0;
+      &.gold {
+        color: $gold;
+        margin-top: 25px;
+      }
+      a {
+        color: $black;
+      }
+    }
+  }
+  .menu-container {
+    li {
+      a {
+        color: $grey;
+      }
+      &.current-menu-item {
+        a {
+          color: $grey;
+        }
+      }
+    }
+  }
+  [data-row="bottom"] {
+    border-top: 1px solid $linebreak;
+  }
+}
+
