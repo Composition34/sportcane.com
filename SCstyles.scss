@@ -7,15 +7,24 @@
 // Colors
 $gold: #9D7E43;
 $black: #111111;
+$brown: #27241E;
+$black-10: rgba($black, 0.1);
 $red: #9E2B25;
 $titanium: #BAB7AE;
 $white: #FFFFFF;
 $grey: #888888;
 $linebreak: #D6D6D4;
+$bgwhite: #FAFAF8;
+$bgcream: #F3F1EB;
 
 // Fonts
 $font-heading: 'Bricolage Grotesque', sans-serif;
 $font-body: 'Manrope', sans-serif;
+// Font Weight Variables
+$fw-regular:  400;
+$fw-medium:   500;
+$fw-semibold: 600;
+$fw-bold:     700;
 
 // ==========================================
 // Brand Variables
@@ -52,6 +61,39 @@ $breakpoint-desktop: 1000px;
     padding: 0;
     width: 100%;
     min-height: auto;
+  }
+  .ct-container-full {
+    max-width: 100%;
+    padding: 0;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    .margins-1500 {
+      max-width: 1500px;
+      margin: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .full-width {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .bg-white {
+      background-color: $bgwhite;
+    }
+    .bg-cream {
+      background-color: $bgcream;
+    }
+    .bg-brown {
+      background-color: $brown;
+    }
+    .border-bottom {
+      border-bottom: 1px solid $black-10;
+    }
   }
 }
 
@@ -216,4 +258,769 @@ $breakpoint-desktop: 1000px;
     border-top: 1px solid $linebreak;
   }
 }
+
+body {
+  background-color: $bgwhite;
+}
+
+// Home Page
+.home__pg__hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  padding: 40px 0;
+  .home__pg__hero__entry {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    color: black;
+    align-items: center;
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+    img {
+      display: flex;
+      height: 15px;
+      margin-right: 8px;
+    }
+  }
+}
+
+.home__pg__problem {
+  flex-direction: column;
+  align-items: center;
+  background: $bgwhite;
+  padding: 35px 0;
+  border-bottom: 1px solid $black-10;
+  p {
+    &.gold {
+      font-size: 16px;
+      color: $gold;
+    }
+  }
+  h1 {
+    color: $black;
+    font-size: 40px;
+    width: auto;
+    max-width: calc(100% - 10px);
+  }
+  img {
+    max-width: 1200px;
+    width: calc(100% - 10px);
+    padding: 25px 0 35px 0;
+  }
+}
+
+.home__pg__canes {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 35px;
+  border-bottom: 1px solid $black-10;
+  .home__pg__canes__left {
+    flex: 0 0 auto; // Prevents the image column from shrinking below max-width
+    width: 100%;
+    max-width: 35%;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+  }
+  .home__pg__canes__right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    min-width: 0;
+    p {
+      color: black;
+      &.gold {
+        color: $gold;
+      }
+      &:last-of-type {
+        font-size: 22px;
+        font-weight: $fw-semibold;
+        .grey {
+          color: $grey;
+        }
+        &.gold {
+          color: $gold;
+        }
+      }
+    }
+    h2 {
+      font-family: $font-heading;
+      color: $black;
+      font-size: 40px;
+      width: auto;
+      max-width: calc(100% - 10px);
+    }
+    ol {
+      list-style-type: decimal-leading-zero;
+      li {
+        display: flex;
+        flex-direction: column;
+        padding: 25px 0;
+        color: $black;
+        font-size: 16px;
+        border-bottom: 1px solid $black-10;
+        strong {
+          font-weight: $fw-bold;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+.home__pg__why {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  text-align: left;
+  p {
+    color: black;
+    &.gold {
+      color: $gold;
+    }
+  }
+  h2 {
+    font-family: $font-heading;
+    color: $black;
+    font-size: 40px;
+    width: auto;
+    max-width: calc(100% - 10px);
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    // Each item subtracts its portion of the 2 gaps ( (1.5rem * 2) / 3 = 1rem )
+    $gap-offset: 1rem;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: left;
+      border-radius: 25px;
+      border: 1px solid $black-10;
+      background-color: $bgcream;
+      color: $black;
+      padding: 20px;
+      img {
+        height: auto;
+        width: 48px;
+        margin-bottom: 25px;
+      }
+      strong {
+        font-size: 20px;
+        font-weight: $fw-semibold;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+
+    // ------------------------------------
+    // Row 1: Progressively Smaller (38% -> 34% -> 28%)
+    // ------------------------------------
+    li:nth-child(1) {
+      flex: 0 0 calc(38% - #{$gap-offset});
+    }
+
+    li:nth-child(2) {
+      flex: 0 0 calc(34% - #{$gap-offset});
+    }
+
+    li:nth-child(3) {
+      flex: 0 0 calc(28% - #{$gap-offset});
+      background-color: $black;
+      strong,
+      p {
+        color: $white;
+      }
+    }
+
+    // ------------------------------------
+    // Row 2: Progressively Larger (28% -> 34% -> 38%)
+    // ------------------------------------
+    li:nth-child(4) {
+      flex: 0 0 calc(28% - #{$gap-offset});
+    }
+
+    li:nth-child(5) {
+      flex: 0 0 calc(34% - #{$gap-offset});
+    }
+
+    li:nth-child(6) {
+      flex: 0 0 calc(38% - #{$gap-offset});
+    }
+  }
+}
+
+.home__pg__how__it__works {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  text-align: left;
+  p {
+    color: black;
+    &.gold {
+      color: $gold;
+    }
+  }
+  h2 {
+    font-family: $font-heading;
+    color: $black;
+    font-size: 40px;
+    width: auto;
+    max-width: calc(100% - 10px);
+  }
+  ol {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style: none;
+    counter-reset: circle-counter;
+    padding-left: 0;
+    margin: 0;
+
+    li {
+      counter-increment: circle-counter;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; // Keeps circle aligned with top line of multi-line text
+      gap: 1rem; // Space between the circle and text
+      margin-bottom: 1rem;
+
+      &::before {
+        // Single digit counter (1, 2, 3...)
+        content: counter(circle-counter);
+        flex-shrink: 0; // Prevents circle from squishing when text wraps
+
+        // Circle Dimensions & Shape
+        width: 35px;   // Adjust circle size
+        height: 35px;
+        border-radius: 50%;
+
+        // Center the number inside the circle
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        // Colors & Typography
+        background-color: $white; // Or var(--color-primary)
+        border: 1px solid $black-10;
+        color: $gold;
+        font-weight: $fw-regular;
+        font-size: 18px;
+      }
+      strong {
+        color: $black;
+        font-family: $font-heading;
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.home__pg__engineered {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 35px;
+  .home__pg__engineered__left {
+    flex: 0 0 auto; // Prevents the image column from shrinking below max-width
+    width: 100%;
+    max-width: 35%;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+  }
+  .home__pg__engineered__right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    min-width: 0;
+    p {
+      color: black;
+      &.gold {
+        color: $gold;
+      }
+      &:last-of-type {
+        font-size: 16px;
+      }
+    }
+    h2 {
+      font-family: $font-heading;
+      color: $black;
+      font-size: 40px;
+      width: auto;
+      max-width: calc(100% - 10px);
+    }
+    ul {
+      padding-top: 20px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      li {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        color: $black;
+        font-weight: $fw-semibold;
+        text-align: center;
+        img {
+          width: 100%;
+          height: auto;
+          padding-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+.home__pg__trust {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0;
+  padding: 35px;
+  .home__pg__trust__left {
+    flex: 0 0 auto; // Prevents the image column from shrinking below max-width
+    width: 100%;
+    max-width: 35%;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+    align-items: stretch;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+  .home__pg__trust__right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    min-width: 0;
+    padding: 35px;
+    background-color: $brown;
+    border-radius: 0 20px 20px 0;
+    overflow: hidden;
+    p {
+      color: $white;
+      &.gold {
+        color: $gold;
+      }
+      &:nth-last-of-type(2) {
+        font-weight: $fw-semibold;
+      }
+      &:last-of-type {
+        font-size: 16px;
+        font-weight: $fw-regular;
+      }
+    }
+    h3 {
+      font-family: $font-heading;
+      color: $black;
+      font-size: 26px;
+      color: $white;
+    }
+  }
+}
+
+.home__pg__partner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 35px;
+  p {
+    color: $white;
+    &.gold {
+      color: $gold;
+    }
+    &:last-of-type {
+      font-size: 16px;
+    }
+  }
+  h2 {
+    font-family: $font-heading;
+    color: $white;
+    font-size: 40px;
+    width: auto;
+    max-width: calc(100% - 10px);
+  }
+  img {
+    padding: 35px 0;
+    width: 407px;
+    height: auto;
+  }
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $white;
+    color: $black;
+    font-size: 14px;
+    width: auto;
+    padding: 6px 12px;
+    height: auto;
+    border-radius: 20px;
+    font-weight: $fw-semibold;
+    img {
+      padding: 0 0 0 5px;
+      height: auto;
+      width: 14px;
+    }
+  }
+}
+
+
+
+// About Us
+
+.about__pg__mobility {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 35px;
+  .about__pg__mobility__left {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    min-width: 0;
+    p {
+      color: black;
+      &.gold {
+        color: $gold;
+      }
+    }
+    h2 {
+      font-family: $font-heading;
+      color: $black;
+      font-size: 40px;
+      width: auto;
+      max-width: calc(100% - 10px);
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      list-style: none;
+      padding-left: 0;
+      margin-left: 0;
+      li {
+        color: $black;
+        font-size: 13px;
+      }
+    }
+  }
+  .about__pg__mobility__right {
+    position: relative;
+    flex: 0 0 auto; // Prevents the image column from shrinking below max-width
+    width: 100%;
+    height: 100%;
+    max-width: 65%;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: calc(100% + 35px);
+      right: 0;
+      left: 0;
+      bottom: -35px;
+      background: url('https://www.sportcane.com/wp-content/uploads/2026/08/AboutUsMobilityImg.png') no-repeat center top / cover;
+    }
+  }
+}
+
+.about__pg__why {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-items: center;
+  gap: 2rem;
+  padding: 35px;
+  border-bottom: 1px solid $black-10;
+  .about__pg__why__left {
+    flex: 0 0 auto; // Prevents the image column from shrinking below max-width
+    width: 100%; 
+    max-width: 35%;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+  }
+  .about__pg__why__right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    min-width: 0;
+    p {
+      color: black;
+      &.gold {
+        color: $gold;
+      }
+      &:last-of-type {
+        font-size: 16px;
+        font-weight: $fw-semibold;
+        .grey {
+          color: $grey;
+        }
+        &.gold {
+          color: $gold;
+        }
+      }
+    }
+    h2 {
+      font-family: $font-heading;
+      color: $black;
+      font-size: 40px;
+      width: auto;
+      max-width: calc(100% - 10px);
+    }
+  }
+}
+
+.about__pg_conditions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+  padding: 35px;
+  .about__pg_conditions__top {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    min-width: 0;
+    padding: 25px 0;
+    width: 100%;
+    .about__pg_conditions__top__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+      flex: 1;
+      p {
+        color: black;
+        &.gold {
+          color: $gold;
+        }
+      }
+      h2 {
+        font-family: $font-heading;
+        color: $black;
+        font-size: 40px;
+        width: auto;
+        max-width: calc(100% - 10px);
+      }
+    }
+    .about__pg_conditions__top__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      text-align: left;
+      p {
+        color: black;
+        font-size: 16px;
+        font-weight: $fw-semibold;
+      }
+    }
+  }
+  ol {
+    list-style: none;
+    counter-reset: row-counter;
+    padding: 20px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    li {
+      counter-increment: row-counter;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start; // Keeps number aligned with top line if text wraps
+      width: 100%;
+      gap: 1.5rem; // Distance between number and content
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(#111111, 0.1); // Optional dividing border
+
+      &::before {
+        // Formats the counter as 01, 02, 03...
+        content: counter(row-counter, decimal-leading-zero); 
+        flex-shrink: 0; // Prevents the number from shrinking
+        min-width: 2.5rem; // Ensures steady alignment across columns
+        
+        // Number styling
+        font-family: $font-heading;
+        font-size: 24px;
+        color: $gold; // Or var(--color-accent)
+      }
+
+      strong {
+        font-family: $font-body;
+        font-weight: $fw-semibold;
+        font-size: 20px;
+        display: flex;
+        justify-content: flex-start;
+        text-align: left;
+        white-space: nowrap;
+        flex: 1;
+      }
+      p {
+        font-size: 16px;
+        display: flex;
+        width: 65%;
+        text-align: right;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+.about__pg_clinical {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+  padding: 25px;
+  width: 100%;
+  gap: 15%;
+  .about__pg_clinical__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    flex: 1;
+    p {
+      color: black;
+      &.gold {
+        color: $gold;
+      }
+      &:last-of-type {
+        color: black;
+        font-size: 16px;
+      }
+    }
+    h2 {
+      font-family: $font-heading;
+      color: $black;
+      font-size: 40px;
+      width: auto;
+      max-width: calc(100% - 10px);
+    }
+  }
+  .about__pg_clinical__right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    ol {
+      list-style: none;
+      counter-reset: row-counter;
+      padding: 20px 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      li {
+        counter-increment: row-counter;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; // Keeps number aligned with top line if text wraps
+        width: 100%;
+        gap: 10px; // Distance between number and content
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(#111111, 0.1); // Optional dividing border
+        position: relative;
+        justify-content: center;
+        &::before {
+          // Formats the counter as 01, 02, 03...
+          content: counter(row-counter, decimal-leading-zero); 
+          flex-shrink: 0; // Prevents the number from shrinking
+          min-width: 2.5rem; // Ensures steady alignment across columns
+          
+          // Number styling
+          font-family: $font-heading;
+          font-size: 24px;
+          color: $gold; // Or var(--color-accent)
+          position: absolute;
+          left: 0;
+          top: 8px;
+        }
+        strong {
+          font-family: $font-body;
+          font-weight: $fw-semibold;
+          font-size: 20px;
+          display: flex;
+          justify-content: flex-start;
+          text-align: left;
+          padding-left: 40px;
+        }
+        p {
+          font-size: 16px;
+          display: flex;
+          margin-bottom: 5px;
+          padding-left: 40px;
+          margin-top: 0;
+        } 
+      }
+    }
+    p {
+      font-size: 22px;
+      font-weight: $fw-semibold;
+      margin-top: 15px;
+      .gold {
+        color: $gold;
+      }
+    }
+  }
+}
+
+
+
 
