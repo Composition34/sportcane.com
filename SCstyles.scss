@@ -91,6 +91,9 @@ $breakpoint-desktop: 1000px;
     .bg-brown {
       background-color: $brown;
     }
+    .bg-stripes {
+      background: url('https://www.sportcane.com/wp-content/uploads/2026/08/BGStripes.png') no-repeat center center / cover;
+    }
     .border-bottom {
       border-bottom: 1px solid $black-10;
     }
@@ -1021,6 +1024,512 @@ body {
   }
 }
 
+.about__pg_usa {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+  padding: 25px;
+  width: 100%;
+  gap: 25px;
+  .about__pg_usa__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    flex: 1;
+    p {
+      color: white;
+      &.gold {
+        color: $gold;
+      }
+      &:last-of-type {
+        color: white;
+        font-size: 16px;
+      }
+    }
+    h2 {
+      font-family: $font-heading;
+      color: $white;
+      font-size: 45px;
+      width: auto;
+      .gold {
+        color: $gold;
+      }
+    }
+  }
+  .about__pg_usa__right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background: url('https://www.sportcane.com/wp-content/uploads/2026/08/MadeinUSABadge.png') no-repeat center center / contain;
+  }
+}
+
+.about__pg_trust {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-width: 0;
+  padding: 25px;
+  width: 100%;
+  gap: 25px;
+  .about__pg_trust__1 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-width: 0;
+    padding: 25px;
+    width: 100%;
+    gap: 25px;
+    p {
+      color: $white;
+      &.gold {
+        color: $gold;
+      }
+    }
+    h2 {
+      font-family: $font-heading;
+      color: $white;
+      font-size: 40px;
+      width: auto;
+      max-width: calc(100% - 10px);
+    }
+  }
+  .about__pg_trust__2 {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    min-width: 0;
+    padding: 25px;
+    width: 100%;
+    gap: 25px;
+    .about__pg_trust__2__left {
+      flex: 0 0 auto; // Prevents the image column from shrinking below max-width
+      width: 100%; 
+      max-width: 35%;
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+    }
+    .about__pg_trust__2__right {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      min-width: 0;
+      p {
+        &.bubbles {
+          color: $bgwhite;
+          display: flex;
+          flex-direction: row;
+          span {
+            font-size: 14px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid $bgwhite;
+            &:last-child {
+              margin-left: 20px;
+            }
+          }
+        }
+        &.quote {
+          color: $white;
+          font-size: 24px;
+          margin: 20px 0 0 0;
+        }
+      }
+      h3 {
+        font-family: $font-heading;
+        color: $black;
+        font-size: 38px;
+        width: auto;
+        color: $white;
+      }
+      ul {
+        list-style: none;     
+        padding: 0;
+        margin: 0;
+        display: flex; 
+        flex-direction: row;  
+        gap: 35px;
+        li {
+          display: flex;
+          flex-direction: column; 
+          justify-content: flex-start;
+          font-family: $font-heading;
+          font-size: 38px;
+          color: $gold;
+          span {
+            font-family: $font-body;
+            font-size: 14px;
+            color: $bgwhite;
+          }
+        }
+      }
+    }
+  }
+  .about__pg_trust__3 {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    min-width: 0;
+    padding: 25px;
+    width: 100%;
+    gap: 25px;
+    .about__pg_trust__3__left {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      background: url('https://www.sportcane.com/wp-content/uploads/2026/08/NFLPALogo.png') no-repeat center center / contain;
+    }
+    .about__pg_trust__3__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+      flex: 1;
+      p {
+        color: white;
+        &.gold {
+          color: $gold;
+        }
+        &:last-of-type {
+          color: $bgwhite;
+          font-size: 16px;
+        }
+      }
+      h3 {
+        font-family: $font-heading;
+        color: $white;
+        font-size: 28px;
+        width: auto;
+        .gold {
+          color: $gold;
+        }
+      }
+    }
+  }
+  .about__pg_trust__4 {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    min-width: 0;
+    padding: 25px;
+    width: 100%;
+    gap: 25px;
+    h3 {
+      font-family: $font-heading;
+      color: $white;
+      font-size: 34px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+      span {
+        display: flex;
+        margin-left: 35px;
+        &.gold {
+          color: $gold;
+        }
+      }
+    }
+  }
+}
+
+.about__pg_recovery {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+  padding: 35px;
+  width: 100%;
+  .about__pg_recovery__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-top: 35px;
+    p {
+      color: black;
+      &.gold {
+        color: $gold;
+      }
+    }
+    h3 {
+      font-family: $font-heading;
+      color: $black;
+      font-size: 40px;
+      width: auto;
+      max-width: calc(100% - 10px);
+    }
+  }
+  .about__pg_recovery__bottom {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    ol {
+      list-style: none;
+      counter-reset: row-counter;
+      padding: 20px 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 25px 0;
+      li {
+        counter-increment: row-counter;
+        display: flex;
+        flex: 0 0 calc(100% / 3); /* Exactly 3 columns per row */
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: flex-start; // Keeps number aligned with top line if text wraps
+        padding: 20px 25px 0 25px;
+        position: relative;
+        justify-content: center;
+        border-top: 1px solid $linebreak;
+        &::before {
+          // Formats the counter as 01, 02, 03...
+          content: counter(row-counter, decimal-leading-zero); 
+          flex-shrink: 0; // Prevents the number from shrinking
+          min-width: 2.5rem; // Ensures steady alignment across columns
+          
+          // Number styling
+          font-family: $font-heading;
+          font-size: 24px;
+          color: $gold; // Or var(--color-accent)
+          position: relative;
+          left: 0;
+          top: 8px;
+        }
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(5) {
+          &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 1px;
+            background-color: $linebreak;
+          }
+        }
+        strong {
+          font-family: $font-body;
+          font-weight: $fw-semibold;
+          font-size: 20px;
+          display: flex;
+          justify-content: flex-start;
+          text-align: left;
+          padding: 10px 0;
+          color: $black;
+        }
+        p {
+          font-size: 16px;
+          font-weight: $fw-regular;
+          display: flex;
+          margin-bottom: 5px;
+          margin-top: 0;
+          color: $black;
+        } 
+      }
+    }
+    p {
+      font-size: 22px;
+      font-weight: $fw-semibold;
+      margin-top: 15px;
+      .gold {
+        color: $gold;
+      }
+    }
+  }
+}
+
+.about__pg_move {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 50px 35px;
+  h3 {
+    font-family: $font-heading;
+    color: $white;
+    font-size: 48px;
+    width: auto;
+    max-width: calc(100% - 10px);
+  }
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $white;
+    color: $black;
+    font-size: 14px;
+    width: auto;
+    padding: 6px 12px;
+    height: auto;
+    border-radius: 20px;
+    font-weight: $fw-semibold;
+    img {
+      padding: 0 0 0 5px;
+      height: auto;
+      width: 14px;
+    }
+  }
+}
 
 
+// Contact Page
+.contact__pg_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 60px 35px 50px 35px;
+  img {
+    max-width: 740px;
+    width: 100%;
+    height: auto;
+    margin: 0 0 15px 0;
+  }
+  p {
+    font-size: 16px;
+    color: $white;
+  }
+}
+
+.contact__pg_touch {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+  padding: 35px;
+  width: 100%;
+  .contact__pg_touch__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-top: 35px;
+    p {
+      color: black;
+      &.gold {
+        color: $gold;
+      }
+      &:last-of-type {
+        font-size: 16px;
+      }
+    }
+    h3 {
+      font-family: $font-heading;
+      color: $black;
+      font-size: 40px;
+      width: auto;
+      max-width: calc(100% - 10px);
+    }
+  }
+  .contact__pg_touch__bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    width: 100%;
+    .contact__pg_touch__bottom__left {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        li {
+          display: flex;
+          flex-direction: column;
+          padding: 20px 0;
+          p {
+            font-size: 14px;
+          }
+          strong {
+            font-size: 26px;
+            padding: 15px 0 0 0;
+          }
+        }
+      }
+    }
+    .contact__pg_touch__bottom__right {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      form {
+        p {
+          display: flex;
+          flex-direction: column;
+          padding: 35px;
+          border: 1px solid $linebreak;
+          border-radius: 20px;
+          label {
+            strong {
+              font-weight: $fw-regular;
+            }
+            input {
+              display: flex;
+              border-radius: 8px;
+              &[type="text"],
+              &[type="email"] {
+                border: 1px solid $linebreak;
+              }
+            }
+            textarea {
+              border: 1px solid $linebreak;
+              border-radius: 8px;
+              min-height: 150px;
+              max-height: 300px;
+            }
+          }
+          input {
+            &[type="submit"] {
+              flex: 1;
+              width: 100%;
+              background-color: $black;
+              color: $white;
+              padding: 8px 12px;
+              border-radius: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 

@@ -34,6 +34,9 @@
 .site-main .ct-container-full .bg-brown {
   background-color: #27241E;
 }
+.site-main .ct-container-full .bg-stripes {
+  background: url("https://www.sportcane.com/wp-content/uploads/2026/08/BGStripes.png") no-repeat center center/cover;
+}
 .site-main .ct-container-full .border-bottom {
   border-bottom: 1px solid rgba(17, 17, 17, 0.1);
 }
@@ -887,6 +890,496 @@ body {
 }
 .about__pg_clinical .about__pg_clinical__right p .gold {
   color: #9D7E43;
+}
+
+.about__pg_usa {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+  padding: 25px;
+  width: 100%;
+  gap: 25px;
+}
+.about__pg_usa .about__pg_usa__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  flex: 1;
+}
+.about__pg_usa .about__pg_usa__left p {
+  color: white;
+}
+.about__pg_usa .about__pg_usa__left p.gold {
+  color: #9D7E43;
+}
+.about__pg_usa .about__pg_usa__left p:last-of-type {
+  color: white;
+  font-size: 16px;
+}
+.about__pg_usa .about__pg_usa__left h2 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #FFFFFF;
+  font-size: 45px;
+  width: auto;
+}
+.about__pg_usa .about__pg_usa__left h2 .gold {
+  color: #9D7E43;
+}
+.about__pg_usa .about__pg_usa__right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background: url("https://www.sportcane.com/wp-content/uploads/2026/08/MadeinUSABadge.png") no-repeat center center/contain;
+}
+
+.about__pg_trust {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-width: 0;
+  padding: 25px;
+  width: 100%;
+  gap: 25px;
+}
+.about__pg_trust .about__pg_trust__1 {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-width: 0;
+  padding: 25px;
+  width: 100%;
+  gap: 25px;
+}
+.about__pg_trust .about__pg_trust__1 p {
+  color: #FFFFFF;
+}
+.about__pg_trust .about__pg_trust__1 p.gold {
+  color: #9D7E43;
+}
+.about__pg_trust .about__pg_trust__1 h2 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #FFFFFF;
+  font-size: 40px;
+  width: auto;
+  max-width: calc(100% - 10px);
+}
+.about__pg_trust .about__pg_trust__2 {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  min-width: 0;
+  padding: 25px;
+  width: 100%;
+  gap: 25px;
+}
+.about__pg_trust .about__pg_trust__2 .about__pg_trust__2__left {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 35%;
+}
+.about__pg_trust .about__pg_trust__2 .about__pg_trust__2__left img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.about__pg_trust .about__pg_trust__2 .about__pg_trust__2__right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+}
+.about__pg_trust .about__pg_trust__2 .about__pg_trust__2__right p.bubbles {
+  color: #FAFAF8;
+  display: flex;
+  flex-direction: row;
+}
+.about__pg_trust .about__pg_trust__2 .about__pg_trust__2__right p.bubbles span {
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #FAFAF8;
+}
+.about__pg_trust .about__pg_trust__2 .about__pg_trust__2__right p.bubbles span:last-child {
+  margin-left: 20px;
+}
+.about__pg_trust .about__pg_trust__2 .about__pg_trust__2__right p.quote {
+  color: #FFFFFF;
+  font-size: 24px;
+  margin: 20px 0 0 0;
+}
+.about__pg_trust .about__pg_trust__2 .about__pg_trust__2__right h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #111111;
+  font-size: 38px;
+  width: auto;
+  color: #FFFFFF;
+}
+.about__pg_trust .about__pg_trust__2 .about__pg_trust__2__right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+.about__pg_trust .about__pg_trust__2 .about__pg_trust__2__right ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 38px;
+  color: #9D7E43;
+}
+.about__pg_trust .about__pg_trust__2 .about__pg_trust__2__right ul li span {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  color: #FAFAF8;
+}
+.about__pg_trust .about__pg_trust__3 {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  min-width: 0;
+  padding: 25px;
+  width: 100%;
+  gap: 25px;
+}
+.about__pg_trust .about__pg_trust__3 .about__pg_trust__3__left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background: url("https://www.sportcane.com/wp-content/uploads/2026/08/NFLPALogo.png") no-repeat center center/contain;
+}
+.about__pg_trust .about__pg_trust__3 .about__pg_trust__3__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  flex: 1;
+}
+.about__pg_trust .about__pg_trust__3 .about__pg_trust__3__right p {
+  color: white;
+}
+.about__pg_trust .about__pg_trust__3 .about__pg_trust__3__right p.gold {
+  color: #9D7E43;
+}
+.about__pg_trust .about__pg_trust__3 .about__pg_trust__3__right p:last-of-type {
+  color: #FAFAF8;
+  font-size: 16px;
+}
+.about__pg_trust .about__pg_trust__3 .about__pg_trust__3__right h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #FFFFFF;
+  font-size: 28px;
+  width: auto;
+}
+.about__pg_trust .about__pg_trust__3 .about__pg_trust__3__right h3 .gold {
+  color: #9D7E43;
+}
+.about__pg_trust .about__pg_trust__4 {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  min-width: 0;
+  padding: 25px;
+  width: 100%;
+  gap: 25px;
+}
+.about__pg_trust .about__pg_trust__4 h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #FFFFFF;
+  font-size: 34px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+.about__pg_trust .about__pg_trust__4 h3 span {
+  display: flex;
+  margin-left: 35px;
+}
+.about__pg_trust .about__pg_trust__4 h3 span.gold {
+  color: #9D7E43;
+}
+
+.about__pg_recovery {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+  padding: 35px;
+  width: 100%;
+}
+.about__pg_recovery .about__pg_recovery__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding-top: 35px;
+}
+.about__pg_recovery .about__pg_recovery__top p {
+  color: black;
+}
+.about__pg_recovery .about__pg_recovery__top p.gold {
+  color: #9D7E43;
+}
+.about__pg_recovery .about__pg_recovery__top h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #111111;
+  font-size: 40px;
+  width: auto;
+  max-width: calc(100% - 10px);
+}
+.about__pg_recovery .about__pg_recovery__bottom {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.about__pg_recovery .about__pg_recovery__bottom ol {
+  list-style: none;
+  counter-reset: row-counter;
+  padding: 20px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 25px 0;
+}
+.about__pg_recovery .about__pg_recovery__bottom ol li {
+  counter-increment: row-counter;
+  display: flex;
+  flex: 0 0 33.3333333333%; /* Exactly 3 columns per row */
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 25px 0 25px;
+  position: relative;
+  justify-content: center;
+  border-top: 1px solid #D6D6D4;
+}
+.about__pg_recovery .about__pg_recovery__bottom ol li::before {
+  content: counter(row-counter, decimal-leading-zero);
+  flex-shrink: 0;
+  min-width: 2.5rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 24px;
+  color: #9D7E43;
+  position: relative;
+  left: 0;
+  top: 8px;
+}
+.about__pg_recovery .about__pg_recovery__bottom ol li:nth-child(1)::after, .about__pg_recovery .about__pg_recovery__bottom ol li:nth-child(2)::after, .about__pg_recovery .about__pg_recovery__bottom ol li:nth-child(4)::after, .about__pg_recovery .about__pg_recovery__bottom ol li:nth-child(5)::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background-color: #D6D6D4;
+}
+.about__pg_recovery .about__pg_recovery__bottom ol li strong {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 10px 0;
+  color: #111111;
+}
+.about__pg_recovery .about__pg_recovery__bottom ol li p {
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  margin-bottom: 5px;
+  margin-top: 0;
+  color: #111111;
+}
+.about__pg_recovery .about__pg_recovery__bottom p {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+.about__pg_recovery .about__pg_recovery__bottom p .gold {
+  color: #9D7E43;
+}
+
+.about__pg_move {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 50px 35px;
+}
+.about__pg_move h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #FFFFFF;
+  font-size: 48px;
+  width: auto;
+  max-width: calc(100% - 10px);
+}
+.about__pg_move a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #FFFFFF;
+  color: #111111;
+  font-size: 14px;
+  width: auto;
+  padding: 6px 12px;
+  height: auto;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.about__pg_move a img {
+  padding: 0 0 0 5px;
+  height: auto;
+  width: 14px;
+}
+
+.contact__pg_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 60px 35px 50px 35px;
+}
+.contact__pg_header img {
+  max-width: 740px;
+  width: 100%;
+  height: auto;
+  margin: 0 0 15px 0;
+}
+.contact__pg_header p {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.contact__pg_touch {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+  padding: 35px;
+  width: 100%;
+}
+.contact__pg_touch .contact__pg_touch__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding-top: 35px;
+}
+.contact__pg_touch .contact__pg_touch__top p {
+  color: black;
+}
+.contact__pg_touch .contact__pg_touch__top p.gold {
+  color: #9D7E43;
+}
+.contact__pg_touch .contact__pg_touch__top p:last-of-type {
+  font-size: 16px;
+}
+.contact__pg_touch .contact__pg_touch__top h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #111111;
+  font-size: 40px;
+  width: auto;
+  max-width: calc(100% - 10px);
+}
+.contact__pg_touch .contact__pg_touch__bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  width: 100%;
+}
+.contact__pg_touch .contact__pg_touch__bottom .contact__pg_touch__bottom__left {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.contact__pg_touch .contact__pg_touch__bottom .contact__pg_touch__bottom__left ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.contact__pg_touch .contact__pg_touch__bottom .contact__pg_touch__bottom__left ul li {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+.contact__pg_touch .contact__pg_touch__bottom .contact__pg_touch__bottom__left ul li p {
+  font-size: 14px;
+}
+.contact__pg_touch .contact__pg_touch__bottom .contact__pg_touch__bottom__left ul li strong {
+  font-size: 26px;
+  padding: 15px 0 0 0;
+}
+.contact__pg_touch .contact__pg_touch__bottom .contact__pg_touch__bottom__right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.contact__pg_touch .contact__pg_touch__bottom .contact__pg_touch__bottom__right form p {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  border: 1px solid #D6D6D4;
+  border-radius: 20px;
+}
+.contact__pg_touch .contact__pg_touch__bottom .contact__pg_touch__bottom__right form p label strong {
+  font-weight: 400;
+}
+.contact__pg_touch .contact__pg_touch__bottom .contact__pg_touch__bottom__right form p label input {
+  display: flex;
+  border-radius: 8px;
+}
+.contact__pg_touch .contact__pg_touch__bottom .contact__pg_touch__bottom__right form p label input[type=text], .contact__pg_touch .contact__pg_touch__bottom .contact__pg_touch__bottom__right form p label input[type=email] {
+  border: 1px solid #D6D6D4;
+}
+.contact__pg_touch .contact__pg_touch__bottom .contact__pg_touch__bottom__right form p label textarea {
+  border: 1px solid #D6D6D4;
+  border-radius: 8px;
+  min-height: 150px;
+  max-height: 300px;
+}
+.contact__pg_touch .contact__pg_touch__bottom .contact__pg_touch__bottom__right form p input[type=submit] {
+  flex: 1;
+  width: 100%;
+  background-color: #111111;
+  color: #FFFFFF;
+  padding: 8px 12px;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=SCstyles.css.map */
