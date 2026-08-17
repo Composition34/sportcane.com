@@ -68,36 +68,44 @@ $breakpoint-desktop: 1000px;
     width: 100%;
     min-height: auto;
     text-align: center;
-    .margins-1500 {
-      max-width: 1500px;
-      margin: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-    .full-width {
-      width: 100%;
-      max-width: 100%;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-    }
-    .bg-white {
-      background-color: $bgwhite;
-    }
-    .bg-cream {
-      background-color: $bgcream;
-    }
-    .bg-brown {
-      background-color: $brown;
-    }
-    .bg-stripes {
-      background: url('https://www.sportcane.com/wp-content/uploads/2026/08/BGStripes.png') no-repeat center center / cover;
-    }
-    .border-bottom {
-      border-bottom: 1px solid $black-10;
-    }
   }
+}
+
+.margins-1300 {
+  max-width: 1300px;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.margins-1500 {
+  max-width: 1500px;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.full-width {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.bg-white {
+  background-color: $bgwhite;
+}
+.bg-cream {
+  background-color: $bgcream;
+}
+.bg-brown {
+  background-color: $brown;
+}
+.bg-stripes {
+  background: url('https://www.sportcane.com/wp-content/uploads/2026/08/BGStripes.png') no-repeat center center / cover;
+}
+.border-bottom {
+  border-bottom: 1px solid $black-10;
 }
 
 
@@ -1532,4 +1540,36 @@ body {
     }
   }
 }
+
+
+// Product Page
+.sportcane-custom-product-layout {
+  .sportcane-main-summary-grid {
+    .sportcane-product-gallery {
+      display: flex;
+      flex-direction: row;
+      gap: 35px;
+      padding: 35px;
+      .product-entry-wrapper {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        .woocommerce-product-gallery {
+          width: 100%;
+        }
+      }
+      .sportcane-product-summary {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+
+
+
+
 

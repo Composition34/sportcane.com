@@ -11,33 +11,48 @@
   min-height: auto;
   text-align: center;
 }
-.site-main .ct-container-full .margins-1500 {
+
+.margins-1300 {
+  max-width: 1300px;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.margins-1500 {
   max-width: 1500px;
   margin: 0;
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.site-main .ct-container-full .full-width {
+
+.full-width {
   width: 100%;
   max-width: 100%;
   margin: 0;
   display: flex;
   justify-content: center;
 }
-.site-main .ct-container-full .bg-white {
+
+.bg-white {
   background-color: #FAFAF8;
 }
-.site-main .ct-container-full .bg-cream {
+
+.bg-cream {
   background-color: #F3F1EB;
 }
-.site-main .ct-container-full .bg-brown {
+
+.bg-brown {
   background-color: #27241E;
 }
-.site-main .ct-container-full .bg-stripes {
+
+.bg-stripes {
   background: url("https://www.sportcane.com/wp-content/uploads/2026/08/BGStripes.png") no-repeat center center/cover;
 }
-.site-main .ct-container-full .border-bottom {
+
+.border-bottom {
   border-bottom: 1px solid rgba(17, 17, 17, 0.1);
 }
 
@@ -1380,6 +1395,27 @@ body {
   color: #FFFFFF;
   padding: 8px 12px;
   border-radius: 20px;
+}
+
+.sportcane-custom-product-layout .sportcane-main-summary-grid .sportcane-product-gallery {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  padding: 35px;
+}
+.sportcane-custom-product-layout .sportcane-main-summary-grid .sportcane-product-gallery .product-entry-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.sportcane-custom-product-layout .sportcane-main-summary-grid .sportcane-product-gallery .product-entry-wrapper .woocommerce-product-gallery {
+  width: 100%;
+}
+.sportcane-custom-product-layout .sportcane-main-summary-grid .sportcane-product-gallery .sportcane-product-summary {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 /*# sourceMappingURL=SCstyles.css.map */
