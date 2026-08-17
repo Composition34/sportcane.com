@@ -1418,4 +1418,122 @@ body {
   justify-content: flex-start;
 }
 
+.product__pg__glance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px;
+}
+.product__pg__glance p {
+  display: flex;
+}
+.product__pg__glance p.gold {
+  color: #9D7E43;
+  text-align: left;
+}
+.product__pg__glance ul {
+  display: flex;
+  flex-direction: row;
+}
+.product__pg__glance ul li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px;
+}
+.product__pg__glance ul li strong {
+  display: flex;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 32px;
+  color: #FFFFFF;
+  padding: 0 0 15px 0;
+}
+.product__pg__glance ul li p {
+  display: flex;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+.product__pg__glance ul li:not(:last-child) {
+  border-right: 1px solid #888888;
+}
+
+.product__pg__mechanic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px;
+}
+.product__pg__mechanic .product__pg__mechanic__top {
+  display: flex;
+  padding-bottom: 35px;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.product__pg__mechanic .product__pg__mechanic__top p.gold {
+  font-size: 16px;
+  color: #9D7E43;
+}
+.product__pg__mechanic .product__pg__mechanic__top h2 {
+  color: #111111;
+  font-size: 40px;
+  width: auto;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+.product__pg__mechanic .product__pg__mechanic__bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 15%;
+}
+.product__pg__mechanic .product__pg__mechanic__bottom p {
+  display: flex;
+  flex: 1;
+  text-align: left;
+}
+
+.product__pg__geometry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px;
+}
+.product__pg__geometry .product__pg__geometry__top {
+  display: flex;
+  padding-bottom: 35px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.product__pg__geometry .product__pg__geometry__top p.gold {
+  font-size: 16px;
+  color: #9D7E43;
+}
+.product__pg__geometry .product__pg__geometry__top p:last-of-type {
+  color: #111111;
+  text-align: center;
+}
+.product__pg__geometry .product__pg__geometry__top h2 {
+  color: #111111;
+  font-size: 40px;
+  width: auto;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+.product__pg__geometry .product__pg__geometry__bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 25px;
+}
+.product__pg__geometry .product__pg__geometry__bottom img {
+  display: flex;
+  flex: 1;
+  max-width: calc(50% - 35px);
+}
+
 /*# sourceMappingURL=SCstyles.css.map */

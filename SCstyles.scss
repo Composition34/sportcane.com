@@ -1568,7 +1568,127 @@ body {
   }
 }
 
+.product__pg__glance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px;
+  p {
+    display: flex;
+    &.gold {
+      color: $gold;
+      text-align: left;
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    li {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 25px;
+      strong {
+        display: flex;
+        font-family: $font-heading;
+        font-size: 32px;
+        color: $white;
+        padding: 0 0 15px 0;
+      }
+      p {
+        display: flex;
+        color: $white;
+        font-weight: $fw-regular;
+        margin: 0;
+        padding: 0;
+      }
+      &:not(:last-child) {
+        border-right: 1px solid $grey;
+      }
+    }
+  }
+}
 
+.product__pg__mechanic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px;
+  .product__pg__mechanic__top {
+    display: flex;
+    padding-bottom: 35px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    p {
+      &.gold {
+        font-size: 16px;
+        color: $gold;
+      }
+    }
+    h2 {
+      color: $black;
+      font-size: 40px;
+      width: auto;
+      font-family: $font-heading;
+    }
+  }
+  .product__pg__mechanic__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 15%;
+    p {
+      display: flex;
+      flex: 1;
+      text-align: left;
+    }
+  }
+}
+
+.product__pg__geometry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px;
+  .product__pg__geometry__top {
+    display: flex;
+    padding-bottom: 35px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    p {
+      &.gold {
+        font-size: 16px;
+        color: $gold;
+      }
+      &:last-of-type {
+        color: $black;
+        text-align: center;
+      }
+    }
+    h2 {
+      color: $black;
+      font-size: 40px;
+      width: auto;
+      font-family: $font-heading;
+    }
+  }
+  .product__pg__geometry__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 25px;
+    img {
+      display: flex;
+      flex: 1;
+      max-width: calc(50% - 35px);
+    }
+  }
+}
 
 
 
