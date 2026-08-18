@@ -156,6 +156,7 @@
 
 .ct-footer {
   background-color: #FFFFFF !important;
+  margin-top: 35px;
 }
 .ct-footer .ct-widget img {
   width: auto;
@@ -1417,6 +1418,28 @@ body {
   flex-direction: column;
   justify-content: flex-start;
 }
+.sportcane-custom-product-layout .sportcane-main-summary-grid .sportcane-product-gallery .sportcane-product-summary .product_title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 40px;
+}
+.sportcane-custom-product-layout .sportcane-main-summary-grid .sportcane-product-gallery .sportcane-product-summary .price {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 40px;
+}
+.sportcane-custom-product-layout .sportcane-main-summary-grid .sportcane-product-gallery .sportcane-product-summary .price p {
+  margin: 0;
+}
+.sportcane-custom-product-layout .sportcane-main-summary-grid .sportcane-product-gallery .sportcane-product-summary .sportcane-add-to-cart-wrapper .quantity {
+  border-color: #111111;
+  border-radius: 20px !important;
+}
+.sportcane-custom-product-layout .sportcane-main-summary-grid .sportcane-product-gallery .sportcane-product-summary .sportcane-add-to-cart-wrapper .quantity .ct-increase:hover,
+.sportcane-custom-product-layout .sportcane-main-summary-grid .sportcane-product-gallery .sportcane-product-summary .sportcane-add-to-cart-wrapper .quantity .ct-decrease:hover {
+  background: #111111;
+}
+.sportcane-custom-product-layout .sportcane-main-summary-grid .sportcane-product-gallery .sportcane-product-summary .sportcane-add-to-cart-wrapper .single_add_to_cart_button {
+  background-color: #111111;
+}
 
 .product__pg__glance {
   display: flex;
@@ -1534,6 +1557,452 @@ body {
   display: flex;
   flex: 1;
   max-width: calc(50% - 35px);
+}
+
+.product__pg__enginered {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+  padding: 35px;
+  width: 100%;
+}
+.product__pg__enginered .product__pg__enginered__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding-top: 35px;
+}
+.product__pg__enginered .product__pg__enginered__top p {
+  color: black;
+}
+.product__pg__enginered .product__pg__enginered__top p.gold {
+  color: #9D7E43;
+}
+.product__pg__enginered .product__pg__enginered__top h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #111111;
+  font-size: 40px;
+  width: auto;
+  max-width: calc(100% - 10px);
+}
+.product__pg__enginered .product__pg__enginered__bottom {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.product__pg__enginered .product__pg__enginered__bottom ol {
+  list-style: none;
+  counter-reset: row-counter;
+  padding: 20px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 25px 0;
+}
+.product__pg__enginered .product__pg__enginered__bottom ol li {
+  counter-increment: row-counter;
+  display: flex;
+  flex: 0 0 33.3333333333%; /* Exactly 3 columns per row */
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 25px 0 25px;
+  position: relative;
+  justify-content: center;
+  border-top: 1px solid #D6D6D4;
+}
+.product__pg__enginered .product__pg__enginered__bottom ol li::before {
+  content: counter(row-counter, decimal-leading-zero);
+  flex-shrink: 0;
+  min-width: 2.5rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 24px;
+  color: #9D7E43;
+  position: relative;
+  left: 0;
+  top: 8px;
+}
+.product__pg__enginered .product__pg__enginered__bottom ol li:nth-child(1)::after, .product__pg__enginered .product__pg__enginered__bottom ol li:nth-child(2)::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background-color: #D6D6D4;
+}
+.product__pg__enginered .product__pg__enginered__bottom ol li strong {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 10px 0;
+  color: #111111;
+}
+.product__pg__enginered .product__pg__enginered__bottom ol li p {
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  margin-bottom: 5px;
+  margin-top: 0;
+  color: #111111;
+}
+.product__pg__enginered .product__pg__enginered__bottom p {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+.product__pg__enginered .product__pg__enginered__bottom p .gold {
+  color: #9D7E43;
+}
+
+.product__page__specs {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+  padding: 35px;
+  width: 100%;
+  gap: 15%;
+}
+.product__page__specs .product__page__specs__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  flex: 1;
+}
+.product__page__specs .product__page__specs__left p {
+  color: black;
+}
+.product__page__specs .product__page__specs__left p.gold {
+  color: #9D7E43;
+}
+.product__page__specs .product__page__specs__left p:last-of-type {
+  color: black;
+  font-size: 16px;
+}
+.product__page__specs .product__page__specs__left h2 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #111111;
+  font-size: 40px;
+  width: auto;
+  max-width: calc(100% - 10px);
+}
+.product__page__specs .product__page__specs__left img {
+  display: block;
+  padding-top: 20px;
+  width: 100%;
+  height: auto;
+}
+.product__page__specs .product__page__specs__right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.product__page__specs .product__page__specs__right ul {
+  list-style: none;
+  counter-reset: row-counter;
+  padding: 20px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.product__page__specs .product__page__specs__right ul li {
+  counter-increment: row-counter;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px 0;
+  position: relative;
+  justify-content: space-between;
+}
+.product__page__specs .product__page__specs__right ul li p {
+  font-size: 16px;
+  display: flex;
+  margin-top: 0;
+}
+.product__page__specs .product__page__specs__right ul li strong {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 40px;
+}
+.product__page__specs .product__page__specs__right ul li:not(:last-child) {
+  border-bottom: 1px solid #D6D6D4;
+}
+.product__page__specs .product__page__specs__right p {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+.product__page__specs .product__page__specs__right p .gold {
+  color: #9D7E43;
+}
+
+.product__page__box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  padding: 60px 35px 50px 35px;
+}
+.product__page__box .product__page__box__left {
+  border-right: 1px solid #888888;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 35px;
+  flex: 1;
+}
+.product__page__box .product__page__box__left img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+.product__page__box .product__page__box__left p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.product__page__box .product__page__box__left p.gold {
+  color: #9D7E43;
+}
+.product__page__box .product__page__box__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+.product__page__box .product__page__box__right strong {
+  font-size: 20px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+.product__page__box .product__page__box__right p {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.product__page__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 35px;
+}
+.product__page__info .product__page__info__top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.product__page__info .product__page__info__top p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.product__page__info .product__page__info__top p.gold {
+  color: #9D7E43;
+}
+.product__page__info .product__page__info__top h2 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #111111;
+  font-size: 40px;
+  width: auto;
+  max-width: calc(100% - 10px);
+}
+.product__page__info .product__page__info__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.product__page__info .product__page__info__bottom ul {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.product__page__info .product__page__info__bottom ul li {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+  justify-content: space-between;
+}
+.product__page__info .product__page__info__bottom ul li p {
+  font-size: 16px;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.product__page__info .product__page__info__bottom ul li p a {
+  text-decoration: none;
+  color: #111111;
+}
+.product__page__info .product__page__info__bottom ul li p a:first-child {
+  padding-right: 25px;
+  border-right: 1px solid #D6D6D4;
+}
+.product__page__info .product__page__info__bottom ul li p a:last-child {
+  padding-left: 25px;
+}
+.product__page__info .product__page__info__bottom ul li strong {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+.product__page__info .product__page__info__bottom ul li:not(:last-child) {
+  border-bottom: 1px solid #D6D6D4;
+}
+
+.product__page__faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 35px;
+}
+.product__page__faq .product__page__faq__top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.product__page__faq .product__page__faq__top p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.product__page__faq .product__page__faq__top p.gold {
+  color: #9D7E43;
+}
+.product__page__faq .product__page__faq__top h2 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #111111;
+  font-size: 40px;
+  width: auto;
+  max-width: calc(100% - 10px);
+}
+.product__page__faq .product__page__faq__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.product__page__faq .product__page__faq__bottom ul {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.product__page__faq .product__page__faq__bottom ul li {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 25px 0;
+  position: relative;
+  justify-content: space-between;
+}
+.product__page__faq .product__page__faq__bottom ul li details summary {
+  cursor: pointer;
+  list-style: none; /* Strips default arrow in modern browsers */
+}
+.product__page__faq .product__page__faq__bottom ul li details summary::-webkit-details-marker {
+  display: none; /* Strips default arrow in Safari/Blink */
+}
+.product__page__faq .product__page__faq__bottom ul li details summary strong {
+  position: relative;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+.product__page__faq .product__page__faq__bottom ul li details summary strong:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 7px;
+  width: 14px;
+  height: 14px;
+  background: url("https://www.sportcane.com/wp-content/uploads/2026/08/IconAddGold.png") center right/contain no-repeat;
+}
+.product__page__faq .product__page__faq__bottom ul li details p {
+  font-size: 16px;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.product__page__faq .product__page__faq__bottom ul li details[open] summary strong::after {
+  background: url("https://www.sportcane.com/wp-content/uploads/2026/08/IconCloseGold.png") center right/contain no-repeat;
+}
+.product__page__faq .product__page__faq__bottom ul li:not(:last-child) {
+  border-bottom: 1px solid #D6D6D4;
+}
+
+.product__page__move {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 50px 35px;
+}
+.product__page__move h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #FFFFFF;
+  font-size: 48px;
+  width: auto;
+  max-width: calc(100% - 10px);
+}
+.product__page__move p {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+.product__page__move a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #FFFFFF;
+  color: #111111;
+  font-size: 14px;
+  width: auto;
+  padding: 6px 12px;
+  height: auto;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.product__page__move a img {
+  padding: 0 0 0 5px;
+  height: auto;
+  width: 14px;
 }
 
 /*# sourceMappingURL=SCstyles.css.map */

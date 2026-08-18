@@ -232,6 +232,7 @@ $breakpoint-desktop: 1000px;
 // footer
 .ct-footer {
   background-color: $white !important;
+  margin-top: 35px;
   .ct-widget {
     img {
       width: auto;
@@ -1563,6 +1564,33 @@ body {
         flex: 1;
         flex-direction: column;
         justify-content: flex-start;
+        .product_title {
+          font-family: $font-heading;
+          font-size: 40px;
+        }
+        .sportcane-product-description {
+
+        }
+        .price {
+          font-family: $font-heading;
+          font-size: 40px;
+          p {
+            margin: 0;
+          }
+        }
+        .sportcane-add-to-cart-wrapper {
+          .quantity {
+            border-color: $black;
+            border-radius: 20px !important;
+            .ct-increase:hover,
+            .ct-decrease:hover {
+              background: $black;
+            }
+          }
+          .single_add_to_cart_button {
+            background-color: $black;
+          }
+        }
       }
     }
   }
@@ -1690,6 +1718,468 @@ body {
   }
 }
 
+.product__pg__enginered {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+  padding: 35px;
+  width: 100%;
+  .product__pg__enginered__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-top: 35px;
+    p {
+      color: black;
+      &.gold {
+        color: $gold;
+      }
+    }
+    h3 {
+      font-family: $font-heading;
+      color: $black;
+      font-size: 40px;
+      width: auto;
+      max-width: calc(100% - 10px);
+    }
+  }
+  .product__pg__enginered__bottom {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    ol {
+      list-style: none;
+      counter-reset: row-counter;
+      padding: 20px 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 25px 0;
+      li {
+        counter-increment: row-counter;
+        display: flex;
+        flex: 0 0 calc(100% / 3); /* Exactly 3 columns per row */
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: flex-start; // Keeps number aligned with top line if text wraps
+        padding: 20px 25px 0 25px;
+        position: relative;
+        justify-content: center;
+        border-top: 1px solid $linebreak;
+        &::before {
+          // Formats the counter as 01, 02, 03...
+          content: counter(row-counter, decimal-leading-zero); 
+          flex-shrink: 0; // Prevents the number from shrinking
+          min-width: 2.5rem; // Ensures steady alignment across columns
+          
+          // Number styling
+          font-family: $font-heading;
+          font-size: 24px;
+          color: $gold; // Or var(--color-accent)
+          position: relative;
+          left: 0;
+          top: 8px;
+        }
+        &:nth-child(1),
+        &:nth-child(2) {
+          &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 1px;
+            background-color: $linebreak;
+          }
+        }
+        strong {
+          font-family: $font-body;
+          font-weight: $fw-semibold;
+          font-size: 20px;
+          display: flex;
+          justify-content: flex-start;
+          text-align: left;
+          padding: 10px 0;
+          color: $black;
+        }
+        p {
+          font-size: 16px;
+          font-weight: $fw-regular;
+          display: flex;
+          margin-bottom: 5px;
+          margin-top: 0;
+          color: $black;
+        } 
+      }
+    }
+    p {
+      font-size: 22px;
+      font-weight: $fw-semibold;
+      margin-top: 15px;
+      .gold {
+        color: $gold;
+      }
+    }
+  }
+}
+
+.product__page__specs {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+  padding: 35px;
+  width: 100%;
+  gap: 15%;
+  .product__page__specs__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    flex: 1;
+    p {
+      color: black;
+      &.gold {
+        color: $gold;
+      }
+      &:last-of-type {
+        color: black;
+        font-size: 16px;
+      }
+    }
+    h2 {
+      font-family: $font-heading;
+      color: $black;
+      font-size: 40px;
+      width: auto;
+      max-width: calc(100% - 10px);
+    }
+    img {
+      display: block;
+      padding-top: 20px;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .product__page__specs__right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    ul {
+      list-style: none;
+      counter-reset: row-counter;
+      padding: 20px 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      li {
+        counter-increment: row-counter;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 10px 0;
+        position: relative;
+        justify-content: space-between;
+        p {
+          font-size: 16px;
+          display: flex;
+          margin-top: 0;
+        }
+        strong {
+          font-family: $font-body;
+          font-weight: $fw-semibold;
+          font-size: 16px;
+          display: flex;
+          justify-content: flex-start;
+          text-align: left;
+          padding-left: 40px;
+        } 
+        &:not(:last-child) {
+          border-bottom: 1px solid $linebreak;
+        }
+      }
+    }
+    p {
+      font-size: 22px;
+      font-weight: $fw-semibold;
+      margin-top: 15px;
+      .gold {
+        color: $gold;
+      }
+    }
+  }
+}
+
+.product__page__box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  padding: 60px 35px 50px 35px;
+  .product__page__box__left {
+    border-right: 1px solid $grey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 35px;
+    flex: 1;
+    img {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 0;
+      &.gold {
+        color: $gold;
+      }
+    }
+  }
+  .product__page__box__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    strong {
+      font-size: 20px;
+      font-weight: $fw-semibold;
+      color: $white;
+    }
+    p {
+      font-size: 16px;
+      color: $white;
+    }
+  }
+}
+
+.product__page__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 35px;
+  .product__page__info__top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    p {
+      font-size: 16px;
+      margin-bottom: 0;
+      &.gold {
+        color: $gold;
+      }
+    }
+    h2 {
+      font-family: $font-heading;
+      color: $black;
+      font-size: 40px;
+      width: auto;
+      max-width: calc(100% - 10px);
+    }
+  }
+  .product__page__info__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    ul {
+      list-style: none;
+      padding: 20px 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 0;
+        position: relative;
+        justify-content: space-between;
+        p {
+          font-size: 16px;
+          display: flex;
+          margin-top: 10px;
+          margin-bottom: 0;
+          a {
+            text-decoration: none;
+            color: $black;
+            &:first-child {
+              padding-right: 25px;
+              border-right: 1px solid $linebreak;
+            }
+            &:last-child {
+              padding-left: 25px;
+            }
+          }
+        }
+        strong {
+          font-family: $font-body;
+          font-weight: $fw-bold;
+          font-size: 16px;
+          display: flex;
+          justify-content: flex-start;
+          text-align: left;
+        } 
+        &:not(:last-child) {
+          border-bottom: 1px solid $linebreak;
+        }
+      }
+    }
+  }
+}
+
+.product__page__faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 35px;
+  .product__page__faq__top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    p {
+      font-size: 16px;
+      margin-bottom: 0;
+      &.gold {
+        color: $gold;
+      }
+    }
+    h2 {
+      font-family: $font-heading;
+      color: $black;
+      font-size: 40px;
+      width: auto;
+      max-width: calc(100% - 10px);
+    }
+  }
+  .product__page__faq__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    ul {
+      list-style: none;
+      padding: 20px 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 25px 0;
+        position: relative;
+        justify-content: space-between;
+        details {
+          summary {
+            cursor: pointer;
+            list-style: none; /* Strips default arrow in modern browsers */
+            &::-webkit-details-marker {
+              display: none; /* Strips default arrow in Safari/Blink */
+            }
+            strong {
+              position: relative;
+              font-family: $font-body;
+              font-weight: $fw-bold;
+              font-size: 16px;
+              display: flex;
+              justify-content: flex-start;
+              text-align: left;
+              &:after {
+                position: absolute;
+                content: "";
+                right: 0;
+                top: 7px;
+                width: 14px;
+                height: 14px;
+                background: url('https://www.sportcane.com/wp-content/uploads/2026/08/IconAddGold.png') center right / contain no-repeat;
+              }
+            }
+          }
+          p {
+            font-size: 16px;
+            display: flex;
+            margin-top: 10px;
+            margin-bottom: 0;
+          }
+          &[open] {
+            summary {
+              strong {
+                &::after {
+                  background: url('https://www.sportcane.com/wp-content/uploads/2026/08/IconCloseGold.png') center right / contain no-repeat;
+                }
+              }
+            }
+          }
+        }
+        &:not(:last-child) {
+          border-bottom: 1px solid $linebreak;
+        }
+      }
+    }
+  }
+}
+
+.product__page__move {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 50px 35px;
+  h3 {
+    font-family: $font-heading;
+    color: $white;
+    font-size: 48px;
+    width: auto;
+    max-width: calc(100% - 10px);
+  }
+  p {
+      font-size: 16px;
+      color: $white;
+    }
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $white;
+    color: $black;
+    font-size: 14px;
+    width: auto;
+    padding: 6px 12px;
+    height: auto;
+    border-radius: 20px;
+    font-weight: $fw-semibold;
+    img {
+      padding: 0 0 0 5px;
+      height: auto;
+      width: 14px;
+    }
+  }
+}
 
 
 
