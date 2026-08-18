@@ -298,6 +298,9 @@ body {
       margin-right: 8px;
     }
   }
+  @include tablet {
+    flex-direction: column;
+  }
 }
 
 .home__pg__problem {
@@ -322,6 +325,12 @@ body {
     max-width: 1200px;
     width: calc(100% - 10px);
     padding: 25px 0 35px 0;
+  }
+  @include tablet {
+    h1 {
+      font-size: 36px;
+      line-height: 40px;
+    }
   }
 }
 
@@ -374,17 +383,45 @@ body {
       max-width: calc(100% - 10px);
     }
     ol {
-      list-style-type: decimal-leading-zero;
+      list-style-type: none; /* Turn off native list markers */
+      counter-reset: custom-counter; /* Initialize counter */
       li {
+        position: relative;
+        counter-increment: custom-counter;
         display: flex;
         flex-direction: column;
         padding: 25px 0;
         color: $black;
         font-size: 16px;
         border-bottom: 1px solid $black-10;
+        &::before {
+          position: absolute;
+          left: -40px;
+          content: counter(custom-counter, decimal-leading-zero);
+          font-weight: $fw-bold;
+          margin-bottom: 10px;
+          color: $grey;
+        }
         strong {
           font-weight: $fw-bold;
           margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  @include tablet {
+    flex-direction: column;
+    .home__pg__canes__left {
+      max-width: 100%;
+    }
+    .home__pg__canes__right {
+      h2 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+      ol {
+        li {
+          padding: 15px 0;
         }
       }
     }
@@ -479,6 +516,25 @@ body {
       flex: 0 0 calc(38% - #{$gap-offset});
     }
   }
+  @include tablet {
+    h2 {
+      font-size: 36px;
+      line-height: 40px;
+    }
+    ul {
+      flex-direction: column;
+      align-items: stretch !important;
+      li {
+        &:nth-child(n) { // Targets all nth-child items at once to wipe out desktop basis %
+          flex: 1 1 auto !important; /* Allows height to be driven by content */
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;   /* Resets the 300px fixed height */
+          min-height: 0 !important;
+        }
+      }
+    }
+  }
 }
 
 .home__pg__how__it__works {
@@ -549,6 +605,15 @@ body {
       }
     }
   }
+  @include tablet {
+    h2 {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+  ol {
+    flex-direction: column;
+  }
 }
 
 .home__pg__engineered {
@@ -612,6 +677,35 @@ body {
       }
     }
   }
+  @include tablet {
+    flex-direction: column;
+    .home__pg__engineered__right {
+      h2 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+      ul {
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 0;
+        li {
+          flex: 0 0 auto;           /* Kills vertical flex stretching */
+          justify-content: center; /* Resets vertical centering */
+          align-items: center;
+          width: 100%;               /* Ensures full width */
+          height: auto;              /* Hugs content height naturally */
+
+          img {
+            width: 100%;
+            max-width: 250px;
+            /* If images are stretching too tall on full width, constrain them: */
+            // max-width: 300px; 
+            // margin: 0 auto; 
+          }
+        }
+      }
+    }
+  }
 }
 
 .home__pg__trust {
@@ -666,6 +760,16 @@ body {
       color: $white;
     }
   }
+  @include tablet {
+    .home__pg__trust__left {
+      width: 40%;
+    }
+    .home__pg__trust__right {
+      h3 {
+        font-size: 24px;
+      }
+    }
+  }
 }
 
 .home__pg__partner {
@@ -712,6 +816,12 @@ body {
       padding: 0 0 0 5px;
       height: auto;
       width: 14px;
+    }
+  }
+  @include tablet {
+    h2 {
+      font-size: 36px;
+      line-height: 40px;
     }
   }
 }
@@ -776,6 +886,18 @@ body {
       background: url('https://www.sportcane.com/wp-content/uploads/2026/08/AboutUsMobilityImg.png') no-repeat center top / cover;
     }
   }
+  @include tablet {
+    flex-direction: column;
+    .about__pg__mobility__left  {
+      h2 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+    .about__pg__mobility__right {
+      display: none;
+    }
+  }
 }
 
 .about__pg__why {
@@ -826,6 +948,18 @@ body {
       font-size: 40px;
       width: auto;
       max-width: calc(100% - 10px);
+    }
+  }
+  @include tablet {
+    flex-direction: column;
+    .about__pg__why__left {
+      max-width: 35%;
+    }
+    .about__pg__why__right {
+      h2 {
+        font-size: 36px;
+        line-height: 40px;
+      }
     }
   }
 }
@@ -929,6 +1063,29 @@ body {
       }
     }
   }
+  @include tablet {
+    .about__pg_conditions__top {
+      flex-direction: column;
+      .about__pg_conditions__top__left {
+        h2 {
+          font-size: 36px;
+          line-height: 40px;
+        }
+      }
+      .about__pg_conditions__top__right {
+        align-items: flex-start;
+      }
+    }
+    ol {
+      li {
+        flex-direction: column;
+        p {
+          width: 100%;
+          text-align: left;
+        }
+      }
+    }
+  }
 }
 
 .about__pg_clinical {
@@ -938,7 +1095,7 @@ body {
   justify-content: center;
   text-align: left;
   min-width: 0;
-  padding: 25px;
+  padding: 35px;
   width: 100%;
   gap: 15%;
   .about__pg_clinical__left {
@@ -1031,6 +1188,19 @@ body {
       }
     }
   }
+  @include tablet {
+    flex-direction: column;
+    gap: 0;
+    .about__pg_clinical__left {
+      h2 {
+        font-size: 36px;
+        line-height: 40px;
+      }   
+    }
+    .about__pg_clinical__right {
+      width: 100%;
+    }
+  }
 }
 
 .about__pg_usa {
@@ -1076,6 +1246,20 @@ body {
     flex-direction: column;
     width: 50%;
     background: url('https://www.sportcane.com/wp-content/uploads/2026/08/MadeinUSABadge.png') no-repeat center center / contain;
+  }
+  @include tablet {
+    flex-direction: column;
+    .about__pg_usa__left {
+      width: 100%;
+      h2 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+    .about__pg_usa__right {
+      height: 150px;
+      width: 100%;
+    }
   }
 }
 
@@ -1265,6 +1449,39 @@ body {
       }
     }
   }
+  @include tablet {
+    .about__pg_trust__1 {
+      h2 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+    .about__pg_trust__2 {
+      flex-direction: column;
+      .about__pg_trust__2__right {
+          h3 {
+            font-size: 36px;
+            line-height: 40px;
+          }
+      }
+    }
+    .about__pg_trust__3 {
+      flex-direction: column;
+      .about__pg_trust__3__right {
+          h3 {
+            font-size: 36px;
+            line-height: 40px;
+          }
+      }
+    }
+    .about__pg_trust__4 {
+      flex-direction: column;
+      h3 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+  }
 }
 
 .about__pg_recovery {
@@ -1378,6 +1595,40 @@ body {
       }
     }
   }
+  @include tablet {
+    .about__pg_recovery__top {
+      h3 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+    .about__pg_recovery__bottom {
+      ol {
+        li {
+          flex: 0 0 calc(100% / 2);
+          &:nth-child(1),
+          &:nth-child(3),
+          &:nth-child(5) {
+            &::after {
+              position: absolute;
+              content: "";
+              top: 0;
+              bottom: 0;
+              right: 0;
+              width: 1px;
+              background-color: $linebreak;
+            }
+          }
+          &:nth-child(2),
+          &:nth-child(4) {
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .about__pg_move {
@@ -1410,6 +1661,12 @@ body {
       padding: 0 0 0 5px;
       height: auto;
       width: 14px;
+    }
+  }
+  @include tablet {
+    h3 {
+      font-size: 36px;
+      line-height: 40px;
     }
   }
 }
@@ -1540,6 +1797,25 @@ body {
       }
     }
   }
+  @include tablet {
+    .contact__pg_touch__top {
+      h3 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+    .contact__pg_touch__bottom {
+      flex-direction: column;
+      gap: 0;
+      .contact__pg_touch__bottom__left {
+        order: 2;
+        width: 100%;
+      }
+      .contact__pg_touch__bottom__right {
+        order: 1;
+      }
+    }
+  }
 }
 
 
@@ -1592,6 +1868,9 @@ body {
           }
         }
       }
+      @include tablet {
+        flex-direction: column;
+      }
     }
   }
 }
@@ -1635,6 +1914,33 @@ body {
       }
     }
   }
+  @include tablet {
+    ul {
+      flex-direction: column;
+      padding: 0;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      li {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        strong {
+          display: flex;
+          font-family: $font-heading;
+          font-size: 30px;
+          color: $white;
+          padding: 0 0 8px 0;
+          text-align: center;
+        }
+        &:not(:last-child) {
+          border-bottom: 1px solid $grey;
+          border-right: none;
+        }
+      }
+    }
+  }
 }
 
 .product__pg__mechanic {
@@ -1671,6 +1977,18 @@ body {
       display: flex;
       flex: 1;
       text-align: left;
+    }
+  }
+  @include tablet {
+    .product__pg__mechanic__top {
+      h2 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+    .product__pg__mechanic__bottom {
+      flex-direction: column;
+      gap: 0;
     }
   }
 }
@@ -1714,6 +2032,21 @@ body {
       display: flex;
       flex: 1;
       max-width: calc(50% - 35px);
+    }
+  }
+  @include tablet {
+    .product__pg__geometry__top {
+      h2 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+    .product__pg__geometry__bottom {
+      flex-direction: column;
+      gap: 10px;
+      img {
+        max-width: calc(100% - 35px);
+      }
     }
   }
 }
@@ -1919,6 +2252,30 @@ body {
       }
     }
   }
+  @include tablet {
+    flex-direction: column;
+    gap: 0;
+    .product__page__specs__left {
+      h2 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+      img {
+        width: 65%;
+        margin: 0 auto;
+      }
+    }
+    .product__page__specs__right {
+      width: 100%;
+      ul {
+        li {
+          strong {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
 }
 
 .product__page__box {
@@ -1962,6 +2319,16 @@ body {
     p {
       font-size: 16px;
       color: $white;
+    }
+  }
+  @include tablet {
+    flex-direction: column;
+    .product__page__box__left {
+      padding: 0;
+      border-right: none;
+    }
+    .product__page__box__right {
+
     }
   }
 }
@@ -2041,6 +2408,14 @@ body {
         &:not(:last-child) {
           border-bottom: 1px solid $linebreak;
         }
+      }
+    }
+  }
+  @include tablet {
+    .product__page__info__top {
+      h2 {
+        font-size: 36px;
+        line-height: 40px;
       }
     }
   }
@@ -2141,6 +2516,14 @@ body {
       }
     }
   }
+  @include tablet {
+    .product__page__faq__top {
+      h2 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+  }
 }
 
 .product__page__move {
@@ -2177,6 +2560,12 @@ body {
       padding: 0 0 0 5px;
       height: auto;
       width: 14px;
+    }
+  }
+  @include tablet {
+    h3 {
+      font-size: 36px;
+      line-height: 40px;
     }
   }
 }

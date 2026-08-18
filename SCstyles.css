@@ -214,6 +214,11 @@ body {
   height: 15px;
   margin-right: 8px;
 }
+@media screen and (max-width: 999px) {
+  .home__pg__hero {
+    flex-direction: column;
+  }
+}
 
 .home__pg__problem {
   flex-direction: column;
@@ -236,6 +241,12 @@ body {
   max-width: 1200px;
   width: calc(100% - 10px);
   padding: 25px 0 35px 0;
+}
+@media screen and (max-width: 999px) {
+  .home__pg__problem h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
 }
 
 .home__pg__canes {
@@ -289,9 +300,12 @@ body {
   max-width: calc(100% - 10px);
 }
 .home__pg__canes .home__pg__canes__right ol {
-  list-style-type: decimal-leading-zero;
+  list-style-type: none; /* Turn off native list markers */
+  counter-reset: custom-counter; /* Initialize counter */
 }
 .home__pg__canes .home__pg__canes__right ol li {
+  position: relative;
+  counter-increment: custom-counter;
   display: flex;
   flex-direction: column;
   padding: 25px 0;
@@ -299,9 +313,32 @@ body {
   font-size: 16px;
   border-bottom: 1px solid rgba(17, 17, 17, 0.1);
 }
+.home__pg__canes .home__pg__canes__right ol li::before {
+  position: absolute;
+  left: -40px;
+  content: counter(custom-counter, decimal-leading-zero);
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #888888;
+}
 .home__pg__canes .home__pg__canes__right ol li strong {
   font-weight: 700;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 999px) {
+  .home__pg__canes {
+    flex-direction: column;
+  }
+  .home__pg__canes .home__pg__canes__left {
+    max-width: 100%;
+  }
+  .home__pg__canes .home__pg__canes__right h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .home__pg__canes .home__pg__canes__right ol li {
+    padding: 15px 0;
+  }
 }
 
 .home__pg__why {
@@ -378,6 +415,23 @@ body {
 .home__pg__why ul li:nth-child(6) {
   flex: 0 0 calc(38% - 1rem);
 }
+@media screen and (max-width: 999px) {
+  .home__pg__why h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .home__pg__why ul {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+  .home__pg__why ul li:nth-child(n) {
+    flex: 1 1 auto !important; /* Allows height to be driven by content */
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important; /* Resets the 300px fixed height */
+    min-height: 0 !important;
+  }
+}
 
 .home__pg__how__it__works {
   display: flex;
@@ -438,6 +492,15 @@ body {
 .home__pg__how__it__works ol li p {
   font-size: 16px;
   margin-bottom: 0;
+}
+@media screen and (max-width: 999px) {
+  .home__pg__how__it__works h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+.home__pg__how__it__works ol {
+  flex-direction: column;
 }
 
 .home__pg__engineered {
@@ -502,6 +565,32 @@ body {
   height: auto;
   padding-bottom: 15px;
 }
+@media screen and (max-width: 999px) {
+  .home__pg__engineered {
+    flex-direction: column;
+  }
+  .home__pg__engineered .home__pg__engineered__right h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .home__pg__engineered .home__pg__engineered__right ul {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 0;
+  }
+  .home__pg__engineered .home__pg__engineered__right ul li {
+    flex: 0 0 auto; /* Kills vertical flex stretching */
+    justify-content: center; /* Resets vertical centering */
+    align-items: center;
+    width: 100%; /* Ensures full width */
+    height: auto; /* Hugs content height naturally */
+  }
+  .home__pg__engineered .home__pg__engineered__right ul li img {
+    width: 100%;
+    max-width: 250px;
+    /* If images are stretching too tall on full width, constrain them: */
+  }
+}
 
 .home__pg__trust {
   display: flex;
@@ -556,6 +645,14 @@ body {
   font-size: 26px;
   color: #FFFFFF;
 }
+@media screen and (max-width: 999px) {
+  .home__pg__trust .home__pg__trust__left {
+    width: 40%;
+  }
+  .home__pg__trust .home__pg__trust__right h3 {
+    font-size: 24px;
+  }
+}
 
 .home__pg__partner {
   display: flex;
@@ -603,6 +700,12 @@ body {
   padding: 0 0 0 5px;
   height: auto;
   width: 14px;
+}
+@media screen and (max-width: 999px) {
+  .home__pg__partner h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
 }
 
 .about__pg__mobility {
@@ -662,6 +765,18 @@ body {
   bottom: -35px;
   background: url("https://www.sportcane.com/wp-content/uploads/2026/08/AboutUsMobilityImg.png") no-repeat center top/cover;
 }
+@media screen and (max-width: 999px) {
+  .about__pg__mobility {
+    flex-direction: column;
+  }
+  .about__pg__mobility .about__pg__mobility__left h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about__pg__mobility .about__pg__mobility__right {
+    display: none;
+  }
+}
 
 .about__pg__why {
   display: flex;
@@ -713,6 +828,18 @@ body {
   font-size: 40px;
   width: auto;
   max-width: calc(100% - 10px);
+}
+@media screen and (max-width: 999px) {
+  .about__pg__why {
+    flex-direction: column;
+  }
+  .about__pg__why .about__pg__why__left {
+    max-width: 35%;
+  }
+  .about__pg__why .about__pg__why__right h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
 }
 
 .about__pg_conditions {
@@ -809,6 +936,25 @@ body {
   text-align: right;
   justify-content: flex-end;
 }
+@media screen and (max-width: 999px) {
+  .about__pg_conditions .about__pg_conditions__top {
+    flex-direction: column;
+  }
+  .about__pg_conditions .about__pg_conditions__top .about__pg_conditions__top__left h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about__pg_conditions .about__pg_conditions__top .about__pg_conditions__top__right {
+    align-items: flex-start;
+  }
+  .about__pg_conditions ol li {
+    flex-direction: column;
+  }
+  .about__pg_conditions ol li p {
+    width: 100%;
+    text-align: left;
+  }
+}
 
 .about__pg_clinical {
   display: flex;
@@ -817,7 +963,7 @@ body {
   justify-content: center;
   text-align: left;
   min-width: 0;
-  padding: 25px;
+  padding: 35px;
   width: 100%;
   gap: 15%;
 }
@@ -907,6 +1053,19 @@ body {
 .about__pg_clinical .about__pg_clinical__right p .gold {
   color: #9D7E43;
 }
+@media screen and (max-width: 999px) {
+  .about__pg_clinical {
+    flex-direction: column;
+    gap: 0;
+  }
+  .about__pg_clinical .about__pg_clinical__left h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about__pg_clinical .about__pg_clinical__right {
+    width: 100%;
+  }
+}
 
 .about__pg_usa {
   display: flex;
@@ -952,6 +1111,22 @@ body {
   flex-direction: column;
   width: 50%;
   background: url("https://www.sportcane.com/wp-content/uploads/2026/08/MadeinUSABadge.png") no-repeat center center/contain;
+}
+@media screen and (max-width: 999px) {
+  .about__pg_usa {
+    flex-direction: column;
+  }
+  .about__pg_usa .about__pg_usa__left {
+    width: 100%;
+  }
+  .about__pg_usa .about__pg_usa__left h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about__pg_usa .about__pg_usa__right {
+    height: 150px;
+    width: 100%;
+  }
 }
 
 .about__pg_trust {
@@ -1139,6 +1314,33 @@ body {
 .about__pg_trust .about__pg_trust__4 h3 span.gold {
   color: #9D7E43;
 }
+@media screen and (max-width: 999px) {
+  .about__pg_trust .about__pg_trust__1 h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about__pg_trust .about__pg_trust__2 {
+    flex-direction: column;
+  }
+  .about__pg_trust .about__pg_trust__2 .about__pg_trust__2__right h3 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about__pg_trust .about__pg_trust__3 {
+    flex-direction: column;
+  }
+  .about__pg_trust .about__pg_trust__3 .about__pg_trust__3__right h3 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about__pg_trust .about__pg_trust__4 {
+    flex-direction: column;
+  }
+  .about__pg_trust .about__pg_trust__4 h3 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
 
 .about__pg_recovery {
   display: flex;
@@ -1244,6 +1446,27 @@ body {
 .about__pg_recovery .about__pg_recovery__bottom p .gold {
   color: #9D7E43;
 }
+@media screen and (max-width: 999px) {
+  .about__pg_recovery .about__pg_recovery__top h3 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about__pg_recovery .about__pg_recovery__bottom ol li {
+    flex: 0 0 50%;
+  }
+  .about__pg_recovery .about__pg_recovery__bottom ol li:nth-child(1)::after, .about__pg_recovery .about__pg_recovery__bottom ol li:nth-child(3)::after, .about__pg_recovery .about__pg_recovery__bottom ol li:nth-child(5)::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    background-color: #D6D6D4;
+  }
+  .about__pg_recovery .about__pg_recovery__bottom ol li:nth-child(2)::after, .about__pg_recovery .about__pg_recovery__bottom ol li:nth-child(4)::after {
+    display: none;
+  }
+}
 
 .about__pg_move {
   display: flex;
@@ -1277,6 +1500,12 @@ body {
   padding: 0 0 0 5px;
   height: auto;
   width: 14px;
+}
+@media screen and (max-width: 999px) {
+  .about__pg_move h3 {
+    font-size: 36px;
+    line-height: 40px;
+  }
 }
 
 .contact__pg_header {
@@ -1397,6 +1626,23 @@ body {
   padding: 8px 12px;
   border-radius: 20px;
 }
+@media screen and (max-width: 999px) {
+  .contact__pg_touch .contact__pg_touch__top h3 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .contact__pg_touch .contact__pg_touch__bottom {
+    flex-direction: column;
+    gap: 0;
+  }
+  .contact__pg_touch .contact__pg_touch__bottom .contact__pg_touch__bottom__left {
+    order: 2;
+    width: 100%;
+  }
+  .contact__pg_touch .contact__pg_touch__bottom .contact__pg_touch__bottom__right {
+    order: 1;
+  }
+}
 
 .sportcane-custom-product-layout .sportcane-main-summary-grid .sportcane-product-gallery {
   display: flex;
@@ -1440,6 +1686,11 @@ body {
 .sportcane-custom-product-layout .sportcane-main-summary-grid .sportcane-product-gallery .sportcane-product-summary .sportcane-add-to-cart-wrapper .single_add_to_cart_button {
   background-color: #111111;
 }
+@media screen and (max-width: 999px) {
+  .sportcane-custom-product-layout .sportcane-main-summary-grid .sportcane-product-gallery {
+    flex-direction: column;
+  }
+}
 
 .product__pg__glance {
   display: flex;
@@ -1481,6 +1732,33 @@ body {
 .product__pg__glance ul li:not(:last-child) {
   border-right: 1px solid #888888;
 }
+@media screen and (max-width: 999px) {
+  .product__pg__glance ul {
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .product__pg__glance ul li {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .product__pg__glance ul li strong {
+    display: flex;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 30px;
+    color: #FFFFFF;
+    padding: 0 0 8px 0;
+    text-align: center;
+  }
+  .product__pg__glance ul li:not(:last-child) {
+    border-bottom: 1px solid #888888;
+    border-right: none;
+  }
+}
 
 .product__pg__mechanic {
   display: flex;
@@ -1516,6 +1794,16 @@ body {
   display: flex;
   flex: 1;
   text-align: left;
+}
+@media screen and (max-width: 999px) {
+  .product__pg__mechanic .product__pg__mechanic__top h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .product__pg__mechanic .product__pg__mechanic__bottom {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 .product__pg__geometry {
@@ -1557,6 +1845,19 @@ body {
   display: flex;
   flex: 1;
   max-width: calc(50% - 35px);
+}
+@media screen and (max-width: 999px) {
+  .product__pg__geometry .product__pg__geometry__top h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .product__pg__geometry .product__pg__geometry__bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .product__pg__geometry .product__pg__geometry__bottom img {
+    max-width: calc(100% - 35px);
+  }
 }
 
 .product__pg__enginered {
@@ -1754,6 +2055,26 @@ body {
 .product__page__specs .product__page__specs__right p .gold {
   color: #9D7E43;
 }
+@media screen and (max-width: 999px) {
+  .product__page__specs {
+    flex-direction: column;
+    gap: 0;
+  }
+  .product__page__specs .product__page__specs__left h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .product__page__specs .product__page__specs__left img {
+    width: 65%;
+    margin: 0 auto;
+  }
+  .product__page__specs .product__page__specs__right {
+    width: 100%;
+  }
+  .product__page__specs .product__page__specs__right ul li strong {
+    text-align: right;
+  }
+}
 
 .product__page__box {
   display: flex;
@@ -1798,6 +2119,15 @@ body {
 .product__page__box .product__page__box__right p {
   font-size: 16px;
   color: #FFFFFF;
+}
+@media screen and (max-width: 999px) {
+  .product__page__box {
+    flex-direction: column;
+  }
+  .product__page__box .product__page__box__left {
+    padding: 0;
+    border-right: none;
+  }
 }
 
 .product__page__info {
@@ -1877,6 +2207,12 @@ body {
 }
 .product__page__info .product__page__info__bottom ul li:not(:last-child) {
   border-bottom: 1px solid #D6D6D4;
+}
+@media screen and (max-width: 999px) {
+  .product__page__info .product__page__info__top h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
 }
 
 .product__page__faq {
@@ -1966,6 +2302,12 @@ body {
 .product__page__faq .product__page__faq__bottom ul li:not(:last-child) {
   border-bottom: 1px solid #D6D6D4;
 }
+@media screen and (max-width: 999px) {
+  .product__page__faq .product__page__faq__top h2 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
 
 .product__page__move {
   display: flex;
@@ -2003,6 +2345,12 @@ body {
   padding: 0 0 0 5px;
   height: auto;
   width: 14px;
+}
+@media screen and (max-width: 999px) {
+  .product__page__move h3 {
+    font-size: 36px;
+    line-height: 40px;
+  }
 }
 
 /*# sourceMappingURL=SCstyles.css.map */
