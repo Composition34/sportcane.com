@@ -498,9 +498,9 @@ body {
     font-size: 36px;
     line-height: 40px;
   }
-}
-.home__pg__how__it__works ol {
-  flex-direction: column;
+  .home__pg__how__it__works ol {
+    flex-direction: column;
+  }
 }
 
 .home__pg__engineered {
