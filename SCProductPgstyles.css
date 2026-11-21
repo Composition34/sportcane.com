@@ -1,0 +1,120 @@
+/* Product Page Styles */
+.bg-green {
+  background-color: #173D2B;
+}
+
+/* Top Notification Header */
+.ct-header div[data-row=top] {
+  background-color: #173D2B !important;
+}
+.ct-header div[data-row=top] .ct-container {
+  display: flex;
+  justify-content: center;
+  min-height: 50px !important;
+}
+.ct-header div[data-row=top] .ct-container .header-notification-bar strong {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+}
+.ct-header div[data-row=top] .ct-container .header-notification-bar strong span {
+  color: #D6BD83;
+}
+
+/* Product Page */
+.product-entry-wrapper h1.product_title {
+  font-size: 40px;
+  text-align: left;
+  color: #111111;
+}
+.product-entry-wrapper p.price {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  text-align: left;
+  color: #111111;
+}
+.product-entry-wrapper p.price .sale-price ins {
+  color: #111111;
+}
+.product-entry-wrapper p.price .sale-price del {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #8D2635;
+  opacity: 1;
+}
+.product-entry-wrapper div.quantity input[type=number] {
+  border-color: #173D2B !important;
+  border-radius: 40px !important;
+}
+.product-entry-wrapper .quantity .ct-increase:hover,
+.product-entry-wrapper .quantity .ct-decrease:hover {
+  background: transparent none !important;
+  color: #173D2B !important;
+}
+.product-entry-wrapper .single_add_to_cart_button {
+  background-color: #173D2B !important;
+  color: #FFFFFF !important;
+  border-radius: 40px !important;
+}
+
+.sc-product-custom-sections {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.sc-product-custom-sections .glance {
+  display: flex;
+  flex-direction: column;
+}
+.sc-product-custom-sections .glance p.gold {
+  color: #9D7E43;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 30px 0 10px 0;
+  margin: 0;
+}
+.sc-product-custom-sections .glance ul {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0 0 0;
+  padding: 0 0 30px 0;
+  gap: 0 20px;
+}
+.sc-product-custom-sections .glance ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #FFFFFF;
+  flex: 1;
+  text-align: left;
+}
+.sc-product-custom-sections .glance ul li:not(:last-child) {
+  border-right: 1px solid rgba(250, 250, 248, 0.4);
+}
+.sc-product-custom-sections .glance ul li strong {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  color: #FFFFFF;
+}
+.sc-product-custom-sections .glance ul li p {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(250, 250, 248, 0.4);
+  text-transform: none;
+  line-height: 18px;
+  padding: 5px 0 0 0;
+  margin: 0;
+}
+
+/*# sourceMappingURL=SCProductPgstyles.css.map */

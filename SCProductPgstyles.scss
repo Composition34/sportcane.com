@@ -1,0 +1,200 @@
+/* Product Page Styles */
+
+// ==========================================
+// Brand Variables
+// ==========================================
+
+// Colors
+$gold: #9D7E43;
+$black: #111111;
+$brown: #27241E;
+$black-10: rgba($black, 0.1);
+$red: #9E2B25;
+$titanium: #BAB7AE;
+$white: #FFFFFF;
+$grey: #888888;
+$linebreak: #D6D6D4;
+$bgwhite: #FAFAF8;
+$bgcream: #F3F1EB;
+$green: #173D2B;
+$crimson: #8D2635;
+$lightgold: #D6BD83;
+
+
+// Fonts
+$font-heading: 'Bricolage Grotesque', sans-serif;
+$font-body: 'Manrope', sans-serif;
+// Font Weight Variables
+$fw-regular:  400;
+$fw-medium:   500;
+$fw-semibold: 600;
+$fw-bold:     700;
+
+// ==========================================
+// Brand Variables
+// == ==========================================
+
+
+// ==========================================
+// Responsive Breakpoint Mixins
+// ==========================================
+
+$breakpoint-tablet: 999px;
+$breakpoint-desktop: 1000px;
+
+// Tablet & Mobile (999px and below)
+@mixin tablet {
+  @media screen and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+// Desktop (1000px and up)
+@mixin desktop {
+  @media screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+/* Top Notification Header */
+.ct-header {
+  div[data-row="top"] {
+    background-color: $green !important;
+    .ct-container {
+      display: flex;
+      justify-content: center;
+      min-height: 50px !important;
+      .header-notification-bar {
+        strong {
+          font-family: $font-body;
+          font-weight: $fw-semibold;
+          font-size: 15px;
+          text-transform: uppercase;
+          color: $white;
+          text-align: center;
+          span {
+            color: $lightgold;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Product Page */
+
+.product-entry-wrapper {
+  h1 {
+    &.product_title {
+      font-size: 40px;
+      text-align: left;
+      color: $black;
+    }
+  }
+  p {
+    &.price {
+      font-family: $font-heading;
+      font-weight: $fw-bold;
+      font-size: 40px;
+      text-align: left;
+      color: $black;
+      .sale-price {
+        ins {
+          color: $black;
+        }
+        del {
+          font-family: $font-heading;
+          font-weight: $fw-bold;
+          font-size: 40px;
+          color: $crimson;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  div {
+    &.quantity {
+      input {
+        &[type=number] {
+          border-color: $green !important;
+          border-radius: 40px !important;
+        }
+      }
+    }
+  }
+  .quantity {
+    .ct-increase,
+    .ct-decrease {
+      &:hover {
+        background: transparent none !important;
+        color: $green !important;
+      }
+    }
+  }
+  .single_add_to_cart_button {
+    background-color: $green !important;
+    color: $white !important;
+    border-radius: 40px !important;
+  }
+}
+
+.sc-product-custom-sections {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  .glance {
+    display: flex;
+    flex-direction: column;
+    p {
+      &.gold {
+        color: $gold;
+        font-family: $font-heading;
+        font-weight: $fw-regular;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: left;
+        padding: 30px 0 10px 0;
+        margin: 0;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      margin: 20px 0 0 0;
+      padding: 0 0 30px 0;
+      gap: 0 20px;
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: $white;
+        flex: 1;
+        text-align: left;
+        &:not(:last-child) {
+          border-right: 1px solid rgba($bgwhite, .4);
+        }
+        strong {
+          font-family: $font-heading;
+          font-weight: $fw-bold;
+          font-size: 40px;
+          line-height: 40px;
+          color: $white;
+        }
+        p {
+          font-family: $font-body;
+          font-weight: $fw-regular;
+          font-size: 18px;
+          color: rgba($bgwhite, .4);
+          text-transform: none;
+          line-height: 18px;
+          padding: 5px 0 0 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
