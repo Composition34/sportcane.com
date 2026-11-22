@@ -59,6 +59,9 @@ $breakpoint-desktop: 1000px;
 .bg-green {
   background-color: $green;
 }
+.bg-black {
+  background-color: $black;
+}
 
 /* Top Notification Header */
 .ct-header {
@@ -149,6 +152,7 @@ $breakpoint-desktop: 1000px;
   .glance {
     display: flex;
     flex-direction: column;
+    padding: 35px;
     p {
       &.gold {
         color: $gold;
@@ -157,7 +161,7 @@ $breakpoint-desktop: 1000px;
         font-size: 16px;
         text-transform: uppercase;
         text-align: left;
-        padding: 30px 0 10px 0;
+        padding: 0 0 10px 0;
         margin: 0;
       }
     }
@@ -165,7 +169,7 @@ $breakpoint-desktop: 1000px;
       display: flex;
       flex-direction: row;
       margin: 20px 0 0 0;
-      padding: 0 0 30px 0;
+      padding: 0;
       gap: 0 20px;
       li {
         display: flex;
@@ -187,14 +191,394 @@ $breakpoint-desktop: 1000px;
         p {
           font-family: $font-body;
           font-weight: $fw-regular;
-          font-size: 18px;
+          font-size: 16px;
           color: rgba($bgwhite, .4);
           text-transform: none;
-          line-height: 18px;
+          line-height: 16px;
           padding: 5px 0 0 0;
           margin: 0;
         }
       }
     }
+  }
+  .engineered {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    p {
+      &.gold {
+        color: $gold;
+        font-family: $font-heading;
+        font-weight: $fw-regular;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: left;
+        padding: 0 0 10px 0;
+        margin: 0;
+      }
+    }
+    strong {
+      font-family: $font-heading;
+      font-weight: $fw-bold;
+      font-size: 40px;
+      line-height: 40px;
+      color: $black;
+      text-align: left;
+      width: 50%;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      margin: 20px 0 0 0;
+      padding: 0;
+      gap: 0 20px;
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        text-align: left;
+        p {
+          font-family: $font-body;
+          font-weight: $fw-regular;
+          font-size: 16px;
+          color: $black;
+          text-transform: none;
+          line-height: 25px;
+          padding: 5px 0 0 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .geometry {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    p {
+      &.gold {
+        color: $gold;
+        font-family: $font-heading;
+        font-weight: $fw-regular;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0 0 10px 0;
+        margin: 0;
+      }
+    }
+    strong {
+      font-family: $font-heading;
+      font-weight: $fw-bold;
+      font-size: 40px;
+      line-height: 40px;
+      color: $black;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      margin: 20px 0 0 0;
+      padding: 0;
+      gap: 0 20px;
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  .movement {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    p {
+      &.gold {
+        color: $gold;
+        font-family: $font-heading;
+        font-weight: $fw-regular;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: left;
+        padding: 0 0 10px 0;
+        margin: 0;
+      }
+    }
+    strong {
+      font-family: $font-heading;
+      font-weight: $fw-bold;
+      font-size: 40px;
+      line-height: 40px;
+      color: $black;
+      text-align: left;
+      width: 50%;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      margin: 20px 0 0 0;
+      padding: 0;
+      gap: 0 20px;
+      border-top: 1px solid rgba($black, .25);
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: $white;
+        flex: 1;
+        text-align: left;
+        padding: 10px 0 0 0;
+        &:not(:last-child) {
+          border-right: 1px solid rgba($black, .25);
+        }
+        strong {
+          font-family: $font-heading;
+          font-weight: $fw-bold;
+          font-size: 40px;
+          line-height: 40px;
+          color: $gold;
+          width: 100%;
+        }
+        p {
+          font-family: $font-body;
+          font-weight: $fw-regular;
+          font-size: 16px;
+          line-height: 25px;
+          color: $black;
+          text-transform: none;
+          padding: 5px 0 0 0;
+          margin: 0;
+          strong {
+            font-family: $font-body;
+            font-weight: $fw-bold;
+            font-size: 16px;
+            line-height: 25px;
+            margin-bottom: 10px;
+            color: $black;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .purpose {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    min-width: 0;
+    padding: 35px;
+    width: 100%;
+    gap: 25px;
+    .purpose__left {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      p {
+        &.gold {
+          color: $gold;
+          font-family: $font-heading;
+          font-weight: $fw-regular;
+          font-size: 16px;
+          text-transform: uppercase;
+          text-align: left;
+          padding: 0 0 10px 0;
+          margin: 0;
+        }
+      }
+      strong {
+        font-family: $font-heading;
+        font-weight: $fw-bold;
+        font-size: 40px;
+        line-height: 40px;
+        color: $black;
+        text-align: left;
+        width: 50%;
+      }
+      p {
+        font-family: $font-body;
+        font-weight: $fw-regular;
+        font-size: 16px;
+        color: $black;
+        text-transform: none;
+        line-height: 25px;
+        padding: 5px 0 0 0;
+        margin: 0;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .purpose__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+      flex: 1;
+      ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        li {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 0 20px;
+          font-family: $font-body;
+          font-size: 16px;
+          line-height: 25px;
+          text-transform: none;
+          color: $black;
+          padding: 15px 0;
+          border-top: 1px solid rgba($black, .25);
+          small {
+            font-weight: $fw-regular;
+            text-transform: uppercase;
+            font-size: 16px;
+            line-height: 25px;
+            text-align: left;
+          }
+          strong {
+            font-weight: $fw-bold;
+            font-size: 16px;
+            line-height: 25px;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+  .box {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    min-width: 0;
+    padding: 35px;
+    width: 100%;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex: 1;
+        &:first-child {
+          p {
+            &.gold {
+              color: $gold;
+              font-family: $font-heading;
+              font-weight: $fw-regular;
+              font-size: 16px;
+              text-transform: uppercase;
+              text-align: left;
+              padding: 0 0 10px 0;
+              margin: 0;
+            }
+          }
+          img {
+            width: 80%;
+            height: auto;
+          }
+        }
+        &:last-child {
+          p {
+            font-weight: $fw-regular;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: left;
+            color: $white;
+            strong {
+              font-weight: $fw-bold;
+              font-size: 18px;
+              line-height: 25px;
+              text-align: right;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .purchase {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 35px;
+      p {
+        &.gold {
+          color: $gold;
+          font-family: $font-heading;
+          font-weight: $fw-regular;
+          font-size: 16px;
+          text-transform: uppercase;
+          text-align: left;
+          padding: 0 0 10px 0;
+          margin: 0;
+        }
+      }
+      strong {
+        font-family: $font-heading;
+        font-weight: $fw-bold;
+        font-size: 40px;
+        line-height: 40px;
+        color: $black;
+        text-align: left;
+        width: 50%;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        margin: 35px 0 0 0;
+        padding: 0;
+        li {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          text-align: left;
+          padding: 15px 0;
+          border-top: 1px solid rgba($black, .25);
+          strong {
+            font-family: $font-body;
+            font-weight: $fw-bold;
+            font-size: 16px;
+            line-height: 25px;
+            text-align: left;
+            color: $black;
+            width: 100%;
+            margin-bottom: 10px;
+          }
+          p {
+            font-family: $font-body;
+            font-weight: $fw-regular;
+            font-size: 16px;
+            line-height: 25px;
+            text-align: left;
+            color: $black;
+            padding: 0;
+            a {
+              font-family: $font-body;
+              font-weight: $fw-regular;
+              color: $black;
+              text-decoration: none;
+            }
+          }
+        }
+      }
   }
 }
